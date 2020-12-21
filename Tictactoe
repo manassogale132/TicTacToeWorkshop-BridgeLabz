@@ -147,7 +147,6 @@ public static void placeInBoard() {                //UC4/UC5- Board to display w
 			System.out.println("Please enter valid position from 1-9");
 		}
 		}while(position != 9);
-
 		
 	}
 	
