@@ -10,8 +10,11 @@ public class Main {
     game.userInput();
     
     System.out.println(" ");
-		System.out.println("-Board Check-");
-		game.showBoard();
+    System.out.println("-Board Check-");
+    
+    game.showBoard();		
+    System.out.println(" ");
+    game.placeInBoard();
 
 }
 }
@@ -80,3 +83,71 @@ public static void userInput() {               //UC2- User Input - Method
 		
 		
 	}
+
+public static void placeInBoard() {                //UC4/UC5- Board to display with 'X' or 'O'
+		
+		int position = 0;
+		do {
+		Scanner scan1=new Scanner(System.in);
+		System.out.println("Enter position from 1-9");
+		int position1 = scan1.nextInt();
+		
+		switch(position1) {
+		
+		case 1:
+			board[1] = playerInput;
+			
+			break;
+		case 2:
+			board[2] = playerInput;
+			
+			break;
+		
+		case 3:
+			board[3] = playerInput;
+			
+			break;
+			
+		case 4:
+			board[4] = playerInput;
+
+			break;
+		
+		case 5:
+			board[5] = playerInput;
+			
+			break;
+		
+		case 6:
+			board[6] = playerInput;
+			
+			break;
+			
+		case 7:
+			board[7] = playerInput;
+			
+			break;
+			
+		case 8:
+			board[8] = playerInput;
+					
+			break;
+		
+		case 9:
+			board[9] = playerInput;
+			
+			break;
+		
+		}
+		if(position1 <= 9) {
+			showBoard();
+		}
+		else {
+			System.out.println(" ");
+			System.out.println("Please enter valid position from 1-9");
+		}
+		}while(position != 9);
+
+		
+	}
+	
