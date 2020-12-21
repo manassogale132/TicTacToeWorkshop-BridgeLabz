@@ -6,6 +6,9 @@ public class Main {
 		System.out.println("-----------------------------------");
 		
     TicTacToe game = new TicTacToe();                            //Object
+    
+    game.tossToCheck();
+    
     game.gameboard();
     game.userInput();
     
@@ -151,3 +154,41 @@ public static void placeInBoard() {                //UC4/UC5- Board to display w
 		
 	}
 	
+public static int tossToCheck() {                             //UC6 -Die rolled to check who starts the game
+		
+		int tail = 0;
+		int head = 1;
+		
+	    Random rand = new Random();
+		int playFirst = rand.nextInt(2);
+		
+		System.out.println(" ");
+		System.out.println("Die is tossed to check who starts the game :");
+		System.out.println(" ");
+		
+		if(playFirst == tail) {
+			System.out.println(" ");
+			System.out.println("*Player starts-");
+			System.out.println(" ");
+			
+		}
+		else if(playFirst == head) {
+			System.out.println(" ");
+			System.out.println("Computer starts-");
+			System.out.println(" ");
+			
+		}
+		else {
+			System.out.println(" ");
+			System.out.println("Roll dice again .");
+			System.out.println(" ");
+		}
+		return playFirst;
+		
+		
+		
+	}
+
+	
+				
+}
