@@ -5,8 +5,9 @@ public class Main {
 		System.out.println("--TicTacToe--");
 		System.out.println("-----------------------------------");
 		
-		TicTacToe game = new TicTacToe();                            //Object
+    TicTacToe game = new TicTacToe();                            //Object
     game.gameboard();
+    game.userInput();
 
 }
 }
@@ -33,3 +34,31 @@ public class TicTacToe {
 		return board;
 			
 	}
+	
+public static void userInput() {               //UC2- User Input - Method
+	
+	Scanner scan = new Scanner(System.in);
+	
+	System.out.println("*Player please enter 'X' or 'O' :");
+	
+	String input = scan.nextLine();
+	
+	if(input.equals("X"))
+	{	
+		playerInput='X';
+		System.out.println("Player Input is :"+playerInput);
+		
+
+		
+	}
+	else if(input.equals("O"))  
+	{
+		playerInput='O';
+		System.out.println("Player input is :"+playerInput);
+		
+	}
+	else {
+		System.out.println("Please correct input.");
+	}			
+ }	
+	
